@@ -1,4 +1,6 @@
+O<9m-spindle-warmup> SUB
 
+( Filename: 9m_spindle_warmup.ngc )
 (Quick Spindle Warm-up)
 (Cycle time: ~9-minutes.) 
 
@@ -28,5 +30,7 @@ S22500 M03
 G04 P40. 
 S24000 M03 
 G04 P40. 
+M5
 
+O<9m-spindle-warmup> ENDSUB
 M2

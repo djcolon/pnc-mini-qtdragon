@@ -1,0 +1,10 @@
+O<dtest> SUB
+
+( Filename: dc-tool-job-begin.ngc )
+
+G43 G0 Z0
+
+
+
+O<test> ENDSUB
+M2

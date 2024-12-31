@@ -1,0 +1,38 @@
+O<20m-spindle-warmup> SUB
+
+(Spindle Warm-up)
+(This program should be run prior to) 
+(machine use if machine has been idle) 
+(for more than 4 days.) 
+(Cycle time: 20-minutes.) 
+
+S6000 M03 
+G04 P90. 
+S7500 M03 
+G04 P90. 
+S9000 M03 
+G04 P90. 
+S10500 M03 
+G04 P90. 
+S12000 M03 
+G04 P90. 
+S13500 M03 
+G04 P90. 
+S15000 M03 
+G04 P90. 
+S16500 M03 
+G04 P90. 
+S18000 M03 
+G04 P90. 
+S19500 M03 
+G04 P90. 
+S21000 M03 
+G04 P90. 
+S22500 M03 
+G04 P90. 
+S24000 M03 
+G04 P90. 
+M5
+
+O<20m-spindle-warmup> ENDSUB
+M2
