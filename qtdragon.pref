@@ -1,7 +1,7 @@
 [DIALOG_GEOMETRY]
 AboutDialog-geometry = half
 LncMessage-geometry = 910 539 321 118
-ToolChangeDialog-geometry = default
+ToolChangeDialog-geometry = 910 538 340 239
 VersaHelpDialog-geometry = 660 254 600 600
 _CALCULATOR = 910 539 472 376
 CalculatorDialog-geometry = 910 539 472 376
@@ -23,8 +23,8 @@ RunFromLineDialog_play_sound = True
 RunFromLineDialog_sound_type = READY
 
 [BOOK_KEEPING]
-last_loaded_directory = /home/expatria/linuxcnc/nc_files/chip_drawer_handles
-last_loaded_file = /home/expatria/linuxcnc/nc_files/chip_drawer_handles/chip_drawer_handles_top.ngc
+last_loaded_directory = /home/expatria/linuxcnc/configs/pnc-mini-qtdragon/subroutines
+last_loaded_file = /home/expatria/linuxcnc/configs/pnc-mini-qtdragon/subroutines/dc-tool-change.ngc
 style_QSS_Path = DEFAULT
 RecentPath_0 = /home/expatria/linuxcnc/nc_files/chip_drawer_handles/chip_drawer_handles_top.ngc
 last_saved_directory = /home/expatria/linuxcnc/nc_files/chip_drawer_handles
@@ -94,7 +94,7 @@ gcodegraphics-user-lat = 0.0
 gcodegraphics-user-lon = 0.0
 
 [CUSTOM_FORM_ENTRIES]
-Tool to load = 0
+Tool to load = 99
 Laser X = 100.0
 Laser Y = -20.0
 Sensor X = 10.0

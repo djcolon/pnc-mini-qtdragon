@@ -1,1 +1,6 @@
 # Include your custom_postgui HAL commands here
+
+# QTDragon emulates hal_toolchange. See QTDrahon_hd manpage section 8
+	net tool-change hal_manualtoolchange.change <= iocontrol.0.tool-change
+	net tool-changed hal_manualtoolchange.changed <= iocontrol.0.tool-changed
+	net tool-prep-number hal_manualtoolchange.number <= iocontrol.0.tool-prep-number

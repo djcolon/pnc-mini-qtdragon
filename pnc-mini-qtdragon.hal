@@ -234,7 +234,7 @@
 # Manual toolchange
 
 	#These are for axis, uncomment these and remove qtdragon_toolchange from postgui_call_list.hal if using axis GUI.
-	loadusr -W hal_manualtoolchange
+	#loadusr -W hal_manualtoolchange
 	#net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
 	#net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
 	#net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
@@ -242,8 +242,3 @@
 	
 	#This is for qtdragon_hd, comment out of using axis.
 	net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
-
-
-
-
-	
