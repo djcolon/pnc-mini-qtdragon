@@ -9,7 +9,7 @@
 	
 # LED indicators in GUI
 
-	net probe_input => qtdragon.led-probe
+	net probe => qtdragon.led-probe
 	
 # Spindle feedback from vfdmod
 	

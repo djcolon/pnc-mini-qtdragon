@@ -21,6 +21,7 @@
 	addf flexi.write servo-thread
 	addf stepen_not servo-thread
 	addf stepen_z_not servo-thread
+	addf probe_not servo-thread
 	addf estop_latch servo-thread
 	addf run_and servo-thread
 	addf step_and servo-thread
@@ -195,14 +196,15 @@ net probe <= motion.probe-input => probe_not.out
 # Manual toolchange
 
 	#These are for axis, uncomment these and remove qtdragon_toolchange from postgui_call_list.hal if using axis GUI.
-	#loadusr -W hal_manualtoolchange
+	loadusr -W hal_manualtoolchange
 	#net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
 	#net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
 	#net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
 	#net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
 	
-	#This is forqtdradon_hd, comment out of using axis.
+	#This is for qtdragon_hd, comment out of using axis.
 	net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
+
 
 
 

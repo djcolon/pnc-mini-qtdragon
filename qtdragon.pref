@@ -2,7 +2,10 @@
 AboutDialog-geometry = half
 LncMessage-geometry = 910 539 321 118
 ToolChangeDialog-geometry = default
-VersaHelpDialog-geometry = default
+VersaHelpDialog-geometry = 660 254 600 600
+_CALCULATOR = 910 539 472 376
+CalculatorDialog-geometry = 910 539 472 376
+FileDialog-geometry = 647 346 407 179
 
 [DIALOG_OPTIONS]
 EntryDialog_play_sound = True
@@ -20,9 +23,12 @@ RunFromLineDialog_play_sound = True
 RunFromLineDialog_sound_type = READY
 
 [BOOK_KEEPING]
-last_loaded_directory = 
-last_loaded_file = None
+last_loaded_directory = /home/expatria/linuxcnc/nc_files/chip_drawer_handles
+last_loaded_file = /home/expatria/linuxcnc/nc_files/chip_drawer_handles/chip_drawer_handles_top.ngc
 style_QSS_Path = DEFAULT
+RecentPath_0 = /home/expatria/linuxcnc/nc_files/chip_drawer_handles/chip_drawer_handles_top.ngc
+last_saved_directory = /home/expatria/linuxcnc/nc_files/chip_drawer_handles
+RecentSavedPath_0 = /home/expatria/linuxcnc/nc_files/chip_drawer_handles/chip_drawer_handles_top.ngc
 
 [ORIGINOFFSET_SYSTEM_NAMES]
 __dialogOffsetViewWidget-G54 = User System 1
@@ -88,7 +94,7 @@ gcodegraphics-user-lat = 0.0
 gcodegraphics-user-lon = 0.0
 
 [CUSTOM_FORM_ENTRIES]
-Tool to load = 0
+Tool to load = 4
 Laser X = 100.0
 Laser Y = -20.0
 Sensor X = 10.0
@@ -120,18 +126,18 @@ Camview yscale = 100
 Camview cam number = 0
 
 [VERSA_PROBE_OPTIONS]
-ps_searchvel = 300.0
+ps_searchvel = 20.0
 ps_probevel = 10.0
 ps_z_clearance = 3.0
-ps_probe_max = 1.0
-ps_probe_max_z_travel = 1.0
-ps_probe_latch = 0.5
+ps_probe_max = 4.0
+ps_probe_max_z_travel = 1.5
+ps_probe_latch = 0.9
 ps_probe_diam = 2.0
-ps_xy_clearance = 5.0
-ps_side_edge_length = 5.0
+ps_xy_clearance = 3.0
+ps_side_edge_length = 2.0
 ps_probe_height = 20.0
 ps_block_height = 20.0
-use_tool_measurement = True
+use_tool_measurement = False
 ps_offs_x = 0.0
 ps_offs_y = 0.0
 ps_offs_z = 0.0

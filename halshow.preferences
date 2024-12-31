@@ -13,8 +13,17 @@ set ::watchlist {
     pin+spindle.0.speed-in
     pin+spindle.0.speed-out
     sig+spindle-speed-fb
+    pin+motion.probe-input
+    pin+probe_not.in
+    pin+probe_not.out
+    sig+probe
+    pin+flexi.input.PROBE
+    pin+flexi.input.PROBE.not
+    pin+flexi.input.Y_LIMIT
+    pin+flexi.input.A_LIMIT
+    pin+flexi.input.Z_LIMIT
 }
-set ::workmode showhal
+set ::workmode watchhal
 set ::watchInterval 100
 set ::col1_width 100
 set ::ffmts 
