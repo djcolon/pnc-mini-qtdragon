@@ -5,7 +5,7 @@
 	loadrt [EMCMOT]EMCMOT base_period_nsec=[EMCMOT]BASE_PERIOD servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS
 
 	loadrt flexi PRU_base_freq=120000
-	loadrt not names=stepen_not,stepen_z_not,probe_not
+	loadrt not names=stepen_not,stepen_z_not,probe_not,x_limit_not,yl_limit_not,yr_limit_not,z_limit_not
 	loadrt estop_latch names=estop_latch
 	loadrt and2 names=run_and,step_and
 	loadrt toggle names=hold_button_toggle
@@ -19,14 +19,19 @@
 	addf motion-controller servo-thread
 	addf flexi.update-freq servo-thread
 	addf flexi.write servo-thread
-	addf stepen_not servo-thread
-	addf stepen_z_not servo-thread
-	addf probe_not servo-thread
 	addf estop_latch servo-thread
 	addf run_and servo-thread
 	addf step_and servo-thread
 	addf hold_toggle servo-thread
 	addf hold_button_toggle servo-thread
+	# Nots
+	addf stepen_not servo-thread
+	addf stepen_z_not servo-thread
+	addf probe_not servo-thread
+	addf x_limit_not servo-thread
+	addf yl_limit_not servo-thread
+	addf yr_limit_not servo-thread
+	addf z_limit_not servo-thread
 
 
 #toggle2nist states & mux selectors
@@ -76,7 +81,7 @@
 	net estop-status estop_latch.ok-out => iocontrol.0.emc-enable-in
 
 
-# Joint 0 setup
+# Joint 0 - X
 
 	setp flexi.joint.0.scale [JOINT_0]SCALE
 	setp flexi.joint.0.maxaccel [JOINT_0]STEPGEN_MAXACCEL
@@ -88,10 +93,18 @@
 	net j0pos-fb flexi.joint.0.pos-fb => joint.0.motor-pos-fb
 	net j0enable joint.0.amp-enable-out => flexi.joint.0.enable
 
-	net x-home joint.0.home-sw-in => flexi.input.X_LIMIT
+	# Connect flexi LIMIT to home switch.
+	net both-home-x <= flexi.input.X_LIMIT
+	net both-home-x => joint.0.home-sw-in
+	# And then invert it and also connect it to the hard limits.
+	# That way if we ever lose steps we will hard limit before a crash.
+	# Note that HOME_IGNORE_LIMITS = YES must be set on the relevant joint.
+	net both-home-x => x_limit_not.in
+	net both-home-x-not <= x_limit_not.out
+	net both-home-x-not => joint.0.neg-lim-sw-in
+	net both-home-x-not => joint.0.pos-lim-sw-in
 
-
-# Joint 1 setup
+# Joint 1 - Y-left
 
 	setp flexi.joint.1.scale [JOINT_1]SCALE
 	setp flexi.joint.1.maxaccel [JOINT_1]STEPGEN_MAXACCEL
@@ -103,25 +116,18 @@
 	net j1pos-fb flexi.joint.1.pos-fb => joint.1.motor-pos-fb 
 	net j1enable joint.1.amp-enable-out => flexi.joint.1.enable
 
-	net y-home joint.1.home-sw-in => flexi.input.Y_LIMIT
-
-
-# Joint 2 setup
-
-	setp flexi.joint.2.scale [JOINT_2]SCALE
-	setp flexi.joint.2.maxaccel [JOINT_2]STEPGEN_MAXACCEL
-	setp flexi.joint.2.pgain [JOINT_2]P_GAIN
-	setp flexi.joint.2.ff1gain [JOINT_2]FF1_GAIN
-	setp flexi.joint.2.deadband [JOINT_2]DEADBAND
-
-	net j2pos-cmd joint.2.motor-pos-cmd => flexi.joint.2.pos-cmd
-	net j2pos-fb flexi.joint.2.pos-fb => joint.2.motor-pos-fb
-	net j2enable joint.2.amp-enable-out => flexi.joint.2.enable
-
-	net z-home joint.2.home-sw-in => flexi.input.Z_LIMIT
-
-
-# Joint 3 setup
+	# Connect flexi LIMIT to home switch.
+	net both-home-yl <= flexi.input.Y_LIMIT
+	net both-home-yl => joint.1.home-sw-in
+	# And then invert it and also connect it to the hard limits.
+	# That way if we ever lose steps we will hard limit before a crash.
+	# Note that HOME_IGNORE_LIMITS = YES must be set on the relevant joint.
+	net both-home-yl => yl_limit_not.in
+	net both-home-yl-not <= yl_limit_not.out
+	net both-home-yl-not => joint.1.neg-lim-sw-in
+	net both-home-yl-not => joint.1.pos-lim-sw-in
+	
+# Joint 3 - Y-right (A on flexi)
 
 	setp flexi.joint.3.scale [JOINT_3]SCALE
 	setp flexi.joint.3.maxaccel [JOINT_3]STEPGEN_MAXACCEL
@@ -133,8 +139,40 @@
 	net j3pos-fb flexi.joint.3.pos-fb => joint.3.motor-pos-fb
 	net j3enable joint.3.amp-enable-out => flexi.joint.3.enable
 
-	net A-home joint.3.home-sw-in => flexi.input.A_LIMIT
+	# Connect flexi LIMIT to home switch.
+	net both-home-yr <= flexi.input.A_LIMIT
+	net both-home-yr => joint.3.home-sw-in
+	# And then invert it and also connect it to the hard limits.
+	# That way if we ever lose steps we will hard limit before a crash.
+	# Note that HOME_IGNORE_LIMITS = YES must be set on the relevant joint.
+	net both-home-yr => yr_limit_not.in
+	net both-home-yr-not <= yr_limit_not.out
+	net both-home-yr-not => joint.3.neg-lim-sw-in
+	net both-home-yr-not => joint.3.pos-lim-sw-in	
 
+
+# Joint 2 - Z
+
+	setp flexi.joint.2.scale [JOINT_2]SCALE
+	setp flexi.joint.2.maxaccel [JOINT_2]STEPGEN_MAXACCEL
+	setp flexi.joint.2.pgain [JOINT_2]P_GAIN
+	setp flexi.joint.2.ff1gain [JOINT_2]FF1_GAIN
+	setp flexi.joint.2.deadband [JOINT_2]DEADBAND
+
+	net j2pos-cmd joint.2.motor-pos-cmd => flexi.joint.2.pos-cmd
+	net j2pos-fb flexi.joint.2.pos-fb => joint.2.motor-pos-fb
+	net j2enable joint.2.amp-enable-out => flexi.joint.2.enable
+
+	#net z-home joint.2.home-sw-in => flexi.input.Z_LIMIT
+	# Connect flexi LIMIT to home switch.
+	net both-home-z <= flexi.input.Z_LIMIT
+	net both-home-z => joint.2.home-sw-in
+	# And then invert it and also connect it to the hard limits.
+	# That way if we ever lose steps we will hard limit before a crash.
+	# Note that HOME_IGNORE_LIMITS = YES must be set on the relevant joint.
+	net both-home-z => z_limit_not.in
+	net both-home-z-not <= z_limit_not.out
+	net both-home-z-not => joint.2.pos-lim-sw-in
 
 # Joint 4 setup
 
@@ -186,12 +224,12 @@
 
 # Probe
 
-# inverted
-net flexi_probe_signal <= flexi.input.PROBE => probe_not.in
-net probe <= motion.probe-input => probe_not.out
+	# inverted
+	net flexi_probe_signal <= flexi.input.PROBE => probe_not.in
+	net probe <= motion.probe-input => probe_not.out
 
-# Not inverted
-#net probe <= motion.probe-input => flexi.input.PROBE
+	# Not inverted
+	#net probe <= motion.probe-input => flexi.input.PROBE
 
 # Manual toolchange
 
