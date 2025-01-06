@@ -68,7 +68,7 @@ O<dc-tool-change> SUB
 (------------------------------- CONFIGURATION PARAMETERS ----------------------------------------------)
 #<_UseInches> =         0.0      ( set to 1 to use inches here, or 0 to use millimeters; should match units on tool.tbl dimensions )
 #<_TravelZ> =           0        ( machine Z coordinate for travelling, typically near max Z to avoid ever hitting the work )
-#<_TravelFeed> =      3000.0     ( feedrate used for general Z moves when avoiding G0 )
+#<_TravelFeed> =      6000.0     ( feedrate used for general Z moves when avoiding G0 )
 #<_ProbeX> =           325       ( machine X coordinate of switch/touch-off plate )
 #<_ProbeY> =           339       ( machine Y coordinate of switch/touch-off plate )
 #<_ProbeFastZ> =       -25       ( machine Z coord to move to before starting probe, longest tool should not touch switch at this Z )
@@ -168,7 +168,8 @@ O200 ELSE
   #<_ToolZ> = #5063                                                     ( save new tool length )
   G43.1 Z[#<_ToolZ> - #<_ToolZRef>]                                     ( set new tool length Z offset, we do this now to show operator even though it has to be set again after M72 )
   G53 G1 F[#<_TravelFeed>] Z[#<_TravelZ>]                               ( return to high travel level )
-  (MSG, Replace dust boot then click resume. )
+  ( Needs custom M101 code to display dust boot message. )
+  M101
   G53 G1 F[#<_TravelFeed>] X[#5181] Y[#5182]                            ( return to where we were in X Y)
   #<_ToolZLast> = #<_ToolZ>                                             ( save last tool length )
   

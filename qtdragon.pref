@@ -5,7 +5,8 @@ ToolChangeDialog-geometry = 910 538 340 239
 VersaHelpDialog-geometry = 660 254 600 600
 _CALCULATOR = 910 539 472 376
 CalculatorDialog-geometry = 910 539 472 376
-FileDialog-geometry = 647 346 407 179
+FileDialog-geometry = 647 346 637 430
+basicProbeHelpDialog-geometry = 467 150 793 703
 
 [DIALOG_OPTIONS]
 EntryDialog_play_sound = True
@@ -23,12 +24,12 @@ RunFromLineDialog_play_sound = True
 RunFromLineDialog_sound_type = READY
 
 [BOOK_KEEPING]
-last_loaded_directory = /home/expatria/linuxcnc/configs/pnc-mini-qtdragon/subroutines
-last_loaded_file = /home/expatria/linuxcnc/configs/pnc-mini-qtdragon/subroutines/dc-tool-change.ngc
+last_loaded_directory = /home/expatria/linuxcnc/nc_files/beetle
+last_loaded_file = /home/expatria/linuxcnc/nc_files/beetle/beetle.ngc
 style_QSS_Path = DEFAULT
-RecentPath_0 = /home/expatria/linuxcnc/nc_files/chip_drawer_handles/chip_drawer_handles_top.ngc
-last_saved_directory = /home/expatria/linuxcnc/nc_files/chip_drawer_handles
-RecentSavedPath_0 = /home/expatria/linuxcnc/nc_files/chip_drawer_handles/chip_drawer_handles_top.ngc
+RecentPath_0 = /home/expatria/linuxcnc/nc_files/beetle/beetle.ngc
+last_saved_directory = /media/expatria/PENDRIVE 1/nc_files/beetle
+RecentSavedPath_0 = /media/expatria/PENDRIVE 1/nc_files/beetle/beetle.ngc
 
 [ORIGINOFFSET_SYSTEM_NAMES]
 __dialogOffsetViewWidget-G54 = User System 1
@@ -94,7 +95,7 @@ gcodegraphics-user-lat = 0.0
 gcodegraphics-user-lon = 0.0
 
 [CUSTOM_FORM_ENTRIES]
-Tool to load = 99
+Tool to load = 0
 Laser X = 100.0
 Laser Y = -20.0
 Sensor X = 10.0
@@ -117,7 +118,7 @@ Use keyboard = True
 Use tool sensor = False
 Use tool touchplate = False
 Run from line = False
-Use virtual keyboard = True
+Use virtual keyboard = False
 Use camera = False
 Use alpha display mode = False
 Inhibit display mouse selection = True
@@ -128,7 +129,7 @@ Camview cam number = 0
 [VERSA_PROBE_OPTIONS]
 ps_searchvel = 20.0
 ps_probevel = 10.0
-ps_z_clearance = 3.0
+ps_z_clearance = 0.0
 ps_probe_max = 4.0
 ps_probe_max_z_travel = 1.5
 ps_probe_latch = 0.9
@@ -143,4 +144,22 @@ ps_offs_y = 0.0
 ps_offs_z = 0.0
 ps_offs_angle = 0.0
 ps_probe_rapid_vel = 60.0
+
+[PROBE OPTIONS]
+Probe tool = 99
+Probe diameter = 2
+Probe rapid = 200
+Probe feed = 10
+Probe search = 50
+Probe max travel = 10
+Probe max z = 2
+Probe extra depth = 3
+Probe step off = 0.5
+Probe xy clearance = 2
+Probe z clearance = 2
+Probe edge width = 10
+Calibration offset = 0
+Cal x width = 0
+Cal y width = 0
+Cal diameter = 0
 

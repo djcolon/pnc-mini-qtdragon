@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+# Make sure this is executable. `chmod 700 show_message.sh`
+# M612 - Prompts user to replace dust shoe. In modal group with spindle to prevent further action.
+xmessage "Please replace the dust shoe."
