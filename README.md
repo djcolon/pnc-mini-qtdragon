@@ -34,3 +34,11 @@ I haven't tested this super extensively so use at your own risk.
 
 Make sure you modify all settings like lengths etc for your machine. Settings for the toolchange are
 in the `subroutines/dc-tool-change.ngc` file.
+
+## Post-processing
+
+I've included a copy of a modified post-processor for LinuxCNC that I use:
+`PrintNC-LinuxCNC.cps`
+I use it with
+[Post Process All](https://github.com/TimPaterson/Fusion360-Batch-Post) which
+you should check out.
