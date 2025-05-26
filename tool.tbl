@@ -10,10 +10,10 @@ T130      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-1F-L12
 T135      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-1F-L22
 T230      P0 Z0        D03.10000 ;Dreanique - DLC-D3.1-2F-L12-UD
 T240      P0 Z0        D04.00000 ;Dreanique - DLC-D4.0-2F-L22-UD
-T240      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-2F-L22-UD
 T242      P0 Z0        D04.00000 ;Dreanique - Plain D4-L17-2F UD
 T244      P0 Z0        D04.00000 ;Dreanique - Plain D4-L22-2F UD
 T246      P0 Z0        D04.00000 ;Dreanique - Plain D4-L25-2F UD
+T260      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-2F-L22-UD
 T305      P0 Z0        D04.00000 ;Dreanique - DLC-D4.0-3F-L12
 T310      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-3F-L18
 T320      P0 Z0        D08.00000 ;Dreanique - DLC-D8.0-3F-L24
@@ -32,6 +32,6 @@ T822      P0 Z0        D02.00000 ;HongSheng - D2R0.2 4F Bull
 T842      P0 Z0        D04.00000 ;HongSheng - D4R0.2 4F Bull
 T920      P0 Z0        D02.00000 ;BB - 2-60mm drill Carbide TiSiN
 T942      P0 Z0        D04.20000 ;BB - 4.2-60mm drill Carbide TiSiN
-T965      P0 Z0        D02.50000 ;Osborn - 2.5mm Cobalt
-T973      P0 Z0        D03.30000 ;Osborn - 3.3mm Drill Co
-T982      P0 Z0        D04.20000 ;Osborn - 4.2mm Drill Co
+T965      P0 Z0        D02.50000 ;Osborn - 2.5mm drill 8%Co
+T973      P0 Z0        D03.30000 ;Osborn - 3.3mm Drill 8%Co
+T982      P0 Z0        D04.20000 ;Osborn - 4.2mm Drill 8%Co
