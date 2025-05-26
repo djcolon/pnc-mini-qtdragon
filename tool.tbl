@@ -1,36 +1,37 @@
-T45 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;New Tool 
-T44 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Cobalt drill 4.2mm 
-T1 P1 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;DQ DLC-D6.0-1F-L12 
-T2 P2 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;35mm Spoilboard mill 
-T3 P3 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;DQ up/down SP2FC-D4.0-L25 
-T4 P4 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;DQ 6mm 90deg chamfer (ECP3F-D6.0-r90) 
-T5 P5 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;DQ 6mm Ball (W2B-R3.0-L18) 
-T6 P6 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;6mm L18 DLC Endmill 
-T7 P7 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T8 P8 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T9 P9 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T10 P10 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Cheap 2.5mm endmill 
-T11 P11 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;60deg vcarve bit 
-T12 P12 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Cheap 2.5mm endmill 
-T13 P13 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T14 P14 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T15 P15 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T16 P16 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T17 P17 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T18 P18 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T19 P19 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T20 P20 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T21 P21 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T22 P22 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T23 P23 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T24 P24 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T25 P25 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Added 20220921 
-T30 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;New Tool 
-T31 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;New Tool 
-T32 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;DQ DLC DSA1F-D2.0-L06 
-T40 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;6mm 90deg spot BB 
-T41 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;2mm Carbide Drill BB2055 2*30*60 
-T42 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;4.2mm Carbide Drill BB2055 4.2*60 
-T43 P0 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ; 
-T99 P26 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;Touch probe, 4mm Collet 
-T99999 P99999 X0 Y0 Z0 A0 B0 C0 U0 V0 W0 D0 I0 J0 Q0 ;big tool number 
+T2        P0 Z0        D35.00000 ;Dreanique - Spoilboard_mill
+T24       P0 Z0        D03.15000 ;BB - DLC thread 1T-M4*0.7
+T25       P0 Z0        D03.90000 ;BB - DLC thread 1T-M5*0.8
+T26       P0 Z0        D04.80000 ;BB - DLC thread 1T-M6*1
+T46       P0 Z0        D06.00000 ;BB - DLC-D6.0-3F-L18 Rough
+T99       P0 Z0        D04.00000 ;Probe (4mm holder)
+T100      P0 Z0        D02.00000 ;Dreanique - DLC-D2.0-1F-L06
+T120      P0 Z0        D04.00000 ;Dreanique - DLC-D4.0-1F-L15
+T130      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-1F-L12
+T135      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-1F-L22
+T230      P0 Z0        D03.10000 ;Dreanique - DLC-D3.1-2F-L12-UD
+T240      P0 Z0        D04.00000 ;Dreanique - DLC-D4.0-2F-L22-UD
+T240      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-2F-L22-UD
+T242      P0 Z0        D04.00000 ;Dreanique - Plain D4-L17-2F UD
+T244      P0 Z0        D04.00000 ;Dreanique - Plain D4-L22-2F UD
+T246      P0 Z0        D04.00000 ;Dreanique - Plain D4-L25-2F UD
+T305      P0 Z0        D04.00000 ;Dreanique - DLC-D4.0-3F-L12
+T310      P0 Z0        D06.00000 ;Dreanique - DLC-D6.0-3F-L18
+T320      P0 Z0        D08.00000 ;Dreanique - DLC-D8.0-3F-L24
+T330      P0 Z0        D10.00000 ;Dreanique - DLC-D10.0-3F-L30
+T520      P0 Z0        D02.00000 ;Dreanique - D2 TiAlN Ball
+T525      P0 Z0        D02.00000 ;Dreanique - Plain D2L8 ball
+T540      P0 Z0        D04.00000 ;Dreanique - Plain D4L12 ball
+T545      P0 Z0        D04.00000 ;Dreanique - Plain D4L22 ball
+T560      P0 Z0        D06.00000 ;Dreanique - Plain D6L18 ball
+T640      P0 Z0        D04.00000 ;Shazam - DLC chamfer D4 90deg
+T644      P0 Z0        D04.00000 ;Dreanique - TiAlN Chamfer D4 90deg
+T660      P0 Z0        D06.00000 ;BB - DLC chamfer D6 90deg
+T664      P0 Z0        D06.00000 ;Dreanique - TiAlN Chamfer D6 90deg
+T702      P0 Z0        D03.17500 ;Dreanique - 3.175 60deg 0.2mm engraving
+T822      P0 Z0        D02.00000 ;HongSheng - D2R0.2 4F Bull
+T842      P0 Z0        D04.00000 ;HongSheng - D4R0.2 4F Bull
+T920      P0 Z0        D02.00000 ;BB - 2-60mm drill Carbide TiSiN
+T942      P0 Z0        D04.20000 ;BB - 4.2-60mm drill Carbide TiSiN
+T965      P0 Z0        D02.50000 ;Osborn - 2.5mm Cobalt
+T973      P0 Z0        D03.30000 ;Osborn - 3.3mm Drill Co
+T982      P0 Z0        D04.20000 ;Osborn - 4.2mm Drill Co
